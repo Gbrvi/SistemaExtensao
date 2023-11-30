@@ -1,0 +1,15 @@
+<h1>Extension#index</h1>
+<p>Opera</p>
+
+<ul>
+  <% @extensoes.each do |x| %>
+    
+      <li>
+        <%= x.modalidade %>
+      </li>
+    
+  <% end %>
+</ul>
+
+<%= link_to "New Extension", new_extenso_path %>
+

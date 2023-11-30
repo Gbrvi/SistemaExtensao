@@ -1,0 +1,17 @@
+<h1><%= @extensoes.modalidade %></h1>
+
+<p><%= @extensoes.nome %></p>
+
+<p><%= @extensoes.horas %></p>
+
+<p><%= @extensoes.orientador %></#p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_extenso_path(@extensoes) %></li>
+  <li><%= link_to "Destroy", extensoes_path(@extensoes), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+  <li><%= link_to "Home", extensoes_path %></li>
+</ul>

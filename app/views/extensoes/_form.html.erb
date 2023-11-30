@@ -1,0 +1,43 @@
+<%= form_with model: @extension do |form| %>
+  <div>
+    <%= form.label :modalidade %><br>
+    <%= form.text_field :modalidade %>
+    <% @extensoes.errors.full_messages_for(:modalidade).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  <div>
+
+  <div>
+    <%= form.label :nome %><br>
+    <%= form.text_field :nome %><br>
+    <% @extensoes.errors.full_messages_for(:nome).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+  <%= form.label :horas %><br>
+  <%= form.number_field :horas %>
+  <% @extensoes.errors.full_messages_for(:horas).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :orientador %><br>
+    <%= form.text_field :orientador %><br>
+    <% @extensoes.errors.full_messages_for(:orientador).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<div>
+    <%= link_to "Home", extensoes_path %>
+  </div>
+
+
+<% end %>
